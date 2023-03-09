@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+    
+    
+
+
+   <title>Welcome Page</title>
+        <style>
+            body{
+                background-color: rgb(17, 175, 64);
+                color: black;
+                font-size: 30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Hello Spritle Folks!!!... :-)</h1></center>
+
+        <form action="POST" action="">
+            {% csrf_token %}
+            <a href="http://localhost:8000/calculate/"> Calculate </a> <br>
+            
+            <span class="loginlogoutlink">
+                <a title="Log Out" class="loginlogoutlink-logout" href="?action=logout">Log Out</a>
+             </span>
+        </form>
+    </body>
+
+</html>

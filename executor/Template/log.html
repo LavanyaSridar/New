@@ -1,0 +1,27 @@
+
+
+<!-- log.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: rgb(17, 175, 64);
+            color: black;
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+{% if logs %}
+  {% for log in logs %}
+    {{ log.expression }} {{ log.result }} {{ log.timestamp }}
+  {% endfor %}
+{% else %}
+  <p>No logs found.</p>
+{% endif %}
+</body>
+</html>

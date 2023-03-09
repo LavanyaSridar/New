@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: rgb(17, 175, 64);
+            color: black;
+            font-size: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="expression">Expression:</label>
+        <input type="text" name="expression" id="expression">
+        <button type="submit">Calculate</button><br>
+        <a href="http://localhost:8000/log/">Logs</a>
+    </form>
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+    
+</body>
+</html>
+
+
+
+
+
